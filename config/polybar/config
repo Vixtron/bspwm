@@ -1,0 +1,184 @@
+;  _________        .__         
+;  \_   ___ \_______|__| _____  
+;  /    \  \/\_  __ \  |/     \ 
+;  \     \____|  | \/  |  Y Y  \
+;   \______  /|__|  |__|__|_|  /
+;          \/                \/
+
+[module/bspwm]
+type = internal/bspwm
+pin-workspaces = true
+inline-mode = false
+enable-click = true
+enable-scroll = true
+reverse-scroll = false
+fuzzy-match = true
+extend = 10px
+workspace-label = %index%
+format = <label-state>
+format-background = #1b1b1b
+format-prefix = 
+format-prefix-margin-right = 10
+format-prefix-foreground = #808080
+;949494 is the original
+format-prefix-background = #262626
+format-prefix-padding = 6
+
+label-focused = %name%
+label-focused-foreground = #808080
+label-focused-background = #262626
+label-focused-padding = 6
+
+label-empty = %name%
+label-empty-foreground = #333333
+label-empty-padding = 6
+
+label-occupied = %name%
+label-occupied-foreground = #4d4d4d
+label-occupied-padding = 6
+
+[module/cpu]
+type = internal/cpu
+interval = 0.5
+format = <label>
+label = "  %percentage%%"
+label-foreground = #808080
+label-padding = 1
+label-margin-right = 0
+
+[module/memory]
+type = internal/memory
+interval = 0.5
+format-cpu = <format-prefix> <label>
+format-prefix = "    "
+label = "%percentage_used%%"
+label-padding = 1
+label-margin-right = 1
+format-prefix-padding = 0
+label-foreground = #808080
+format-prefix-foreground = #949494
+
+[module/date]
+type = internal/date
+interval = 1.0
+date = "%l:%M"
+; %p for pm/am
+date-alt = "%A, %d %B %Y"
+time-alt = "%l:%M:%S"
+label = "%date%"
+label-background = #262626
+label-foreground = #808080
+label-padding = 5
+
+[module/xwindow]
+type = internal/xwindow
+format-cpu = <format-prefix> <label>
+format-prefix = 
+format-prefix-background = #262626
+format-prefix-foreground = #949494
+label = %title:0:75:...%
+format-prefix-padding-left = 5
+label-background = #262626
+label-padding = 5
+label-foreground = #808080
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+sink = alsa_output.usb-Generic_USB2.0_Device_20121120222017-01.iec958-stereo
+format-volume = <ramp-volume> 
+format-volume-background = #262626
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+format-volume-padding = 6
+format-volume-foreground = #808080
+mapping = true
+
+[module/volramp]
+type = internal/pulseaudio
+
+format-volume = <bar-volume>
+format-volume-padding = 1
+bar-volume-width = 11
+bar-volume-height = 13
+bar-volume-foreground-0 = #752a2a
+bar-volume-foreground-1 = #752a2a
+bar-volume-gradient = false
+bar-volume-indicator = 
+bar-volume-indicator-foreground = #404040
+format-muted-prefix = " "
+format-muted-foreground = #752a2a
+label-muted = Muted
+
+bar-volume-indicator-font = 3
+bar-volume-fill = ─
+bar-volume-fill-font = 5
+bar-volume-empty = ─
+bar-volume-empty-foreground = #404040
+bar-volume-empty-font = 5
+
+[bar/watch]
+monitor = DP-0
+monitor-strict = true
+bottom = false
+width = 100%
+height = 30
+fixed-center = true
+offset-x = 0
+offset-y = 0
+background = #1b1b1b
+foreground = #ccc
+radius = 0.0
+line-size = 1
+line-color = #752a2a
+border-size = 0
+border-color = #752a2a
+padding = 0
+module-margin = 1
+override-redirect = false
+wm-restack = bspwm
+font-0 = Fira Sans Medium:size=10;3
+font-1 = DroidSansGeorgian-Bold:size=12;3
+font-2 = NotoSansMongolian-Bold:size=12;3
+font-3 = fontawesome:size=13;3
+modules-left = bspwm
+modules-center = date
+modules-right =
+border-bottom-size = 2
+border-bottom-color = #752a2a
+
+[bar/watch2]
+monitor = DVI-I-0
+monitor-strict = true
+bottom = false
+width = 100%
+height = 30
+fixed-center = true
+offset-x = 0
+offset-y = 0
+background = #1b1b1b
+foreground = #ccc
+radius = 0.0
+line-size = 1
+line-color = #752a2a
+border-size = 0
+border-color = #752a2a
+padding = 0
+module-margin = 1
+override-redirect = false
+wm-restack = bspwm
+font-0 = Fira Sans Medium:size=10;3
+font-1 = DroidSansGeorgian-Bold:size=12;3
+font-2 = NotoSansMongolian-Bold:size=12;3
+font-3 = fontawesome:size=13;3
+modules-left = bspwm
+modules-center = date
+modules-right = pulseaudio
+border-bottom-size = 2
+border-bottom-color = #752a2a
+
+[settings]
+throttle-output = 5
+throttle-output-for = 10
+throttle-input-for = 30
