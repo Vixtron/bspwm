@@ -7,7 +7,7 @@ polybar watch &
 polybar watch2 &
 nitrogen --restore &
 xsetroot -cursor_name left_ptr &
-	
+
 firefox &
 discord &
 discord-canary &
