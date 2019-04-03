@@ -17,6 +17,6 @@ Preview of the working environment
 
 ![img1](https://i.imgur.com/8qHCj7I.png)
 ![img2](https://i.imgur.com/Aw5GNWu.png)
-![img3](https://i.imgur.com/Aw5GNWu.png)
+![img3](https://i.imgur.com/sZFgLxH.png)
 
 Credits for colors and style go to [UndeadLeech](https://github.com/chrisduerr)
