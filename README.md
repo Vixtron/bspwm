@@ -12,9 +12,9 @@ Currently using:
 - powerlevel9k
 - alacritty
 - compton
-<br />
-Preview of the working environment
 
+Preview of the working environment
+<br >
 ![img1](https://i.imgur.com/8qHCj7I.png)
 ![img2](https://i.imgur.com/Aw5GNWu.png)
 ![img3](https://i.imgur.com/sZFgLxH.png)
