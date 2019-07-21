@@ -1,0 +1,26 @@
+scrollbar slider {
+    /* Size of the slider */
+    min-width: 8px;
+    min-height: 8px;
+    color: #752a2a;
+    border-radius: unset;
+
+    /* Padding around the slider */
+    border: 2px solid transparent;
+}
+
+scrollbar trough {
+  background-color: #1b1b1b;
+}
+scrollbar.vertical slider,
+scrollbar.vertical .slider {
+    background-image: radial-gradient(ellipse at center, #752a2a 0%, #752a2a 100%);
+}
+
+scrollbar.horizontal slider,
+scrollbar.horizontal .slider {
+    background-image: radial-gradient(ellipse at center, #752a2a 0%, #752a2a 100%);
+}
+tooltip {
+    opacity: 0;
+}
