@@ -1,26 +1,22 @@
-# Path to your oh-my-zsh installation & exports.
-export ZSH=$HOME/.oh-my-zsh
-export EDITOR='vim'
-export SUDO_EDITOR=$EDITOR
-export VISUAL=$EDITOR
-export TERM='xterm-256color'
-export UPDATE_ZSH_DAYS=5
-export SSH_KEY_PATH='~/.ssh/id_rsa'
-# Theme
-ZSH_THEME="powerlevel9k/powerlevel9k"
+# Load zsh config
+export ZSH=$HOME/.config/zsh
 
-DISABLE_AUTO_UPDATE="false"
+# Load environmental variables
+source $ZSH/env.zsh
 
-# Plugins
-plugins=(
-  git
-)
+# Load aliases
+source $ZSH/alias.zsh
 
-source $ZSH/oh-my-zsh.sh
+# Load theme
+source $ZSH/ps1.zsh
 
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='vim'
-fi
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=7'
 
-# Alieses below
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*:*:*:*:*' menu yes select
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z-_}={A-Za-z_-}' 'r:|=*' 'l:|=* r:|=*'
+zstyle ':completion:*' menu select
+
+autoload -U compinit && compinit
+autoload -U colors && colors
