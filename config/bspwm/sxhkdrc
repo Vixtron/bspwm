@@ -1,14 +1,18 @@
 #
 # wm independent hotkeys
 #
-
 # terminal emulator
+
 super + Return
 	alacritty
 
 # program launcher
 super + @space
-	rofi -theme crim -font "fira sans 10" -show drun
+	rofi -show drun
+
+# Maim keybind
+ctrl + alt + r
+        upload
 
 # make sxhkd reload its configuration files:
 super + Escape
