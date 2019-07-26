@@ -8,8 +8,7 @@ Currently using:
 - nitrogen
 - rofi
 - polybar
-- oh-my-zsh
-- powerlevel9k
+- [Custom shell theme](https://github.com/chrisduerr/dotfiles/tree/master/files)
 - alacritty
 - compton
 
